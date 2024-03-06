@@ -13,8 +13,8 @@ This is a simple web application built with Flask that allows users to track the
 
 -History: Users can view the history of their past periods, including start dates, times, durations, and symptoms.
 
-#Clone Rep:
-git clone https://github.com/your_username/periods-tracker.git
+## Clone Rep:
+git clone https://github.com/JanakanDev/Periods_Tracker.git
 
 #Install dependencies:
 pip install -r requirements.txt
