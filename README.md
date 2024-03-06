@@ -1,7 +1,8 @@
-#Periods Tracker
+# Periods Tracker
+
 This is a simple web application built with Flask that allows users to track their menstrual periods. Users can input the start date, start time, end time, and any symptoms they experienced during each period. The application calculates the duration of each period and displays it along with the symptoms. It also provides an estimate of the next period based on the average period gap.
 
-#Features
+## Features
 -Login and Registration: Users can create an account or log in with existing credentials.
 
 -Period Tracking: Users can input the start date, start time, end time, and symptoms of each period.
@@ -23,7 +24,7 @@ flask run
 
 Open a web browser and go to http://localhost:5000 to access the application.
 
-#Usage
+## Usage
 Login or Register: If you're a new user, click on "Register" to create an account. If you already have an account, log in with your credentials.
 
 Add Period: Once logged in, you can add new periods by providing the start date, start time, end time, and any symptoms you experienced.
@@ -34,7 +35,7 @@ Estimate Next Period: The application calculates the estimated date and time of 
 
 Logout: Click on "Logout" to log out of your account.
 
-Technologies Used
+## Technologies Used
 Python
 Flask
 HTML
