@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Welcome, {{ session['username'] }}</h1>
+    <div class="container">
+        <div class="left-column">
+            <h2>Periods</h2>
+            <ul class="periods-list">
+                {% for period in periods %}
+                <li>
+                    <h3>Period {{ loop.index }}</h3>
+                    <strong>Start Date:</strong> {{ period.start_date }}<br>
+                    <strong>Start Time:</strong> {{ period.start_time }}<br>
+                    <strong>End Time:</strong> {{ period.end_time }}<br>
+                    <strong>Symptoms:</strong> {{ period.symptoms }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="right-column">
+            <div class="countdown-container">
+                <h2 id="countdown-title">Next periods in:</h2>
+                <div id="countdown"></div>
+            </div>
+    <script>
+        function updateCountdown() {
+            var avgPeriodGap = {{ avg_period_gap }};
+            var days = Math.floor(avgPeriodGap);
+            var hours = Math.floor((avgPeriodGap - days) * 24);
+            document.getElementById('countdown').innerText = days + ' days ' + hours + ' hours';
+        }
+
+        updateCountdown();
+    </script>
+    <h2>Add Period</h2>
+    <form action="{{ url_for('add_period') }}" method="post">
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required><br>
+        <label for="start_time">Start Time:</label>
+        <input type="time" id="start_time" name="start_time" required><br>
+        <label for="end_time">End Time:</label>
+        <input type="time" id="end_time" name="end_time" required><br>
+        <input type="text" name="symptoms" placeholder="Symptoms"><br>
+        <button type="submit">Add Period</button>
+    </form>
+    <form action="{{ url_for('logout') }}" method="get">
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>
