@@ -41,3 +41,11 @@ Flask
 HTML
 CSS
 SQLite
+
+## Screenshots:
+![Homepage](https://github.com/JanakanDev/Periods_Tracker/assets/94671784/6ea3cfd8-c623-457f-9d97-786cf25b0f9b)
+![Loginpage](https://github.com/JanakanDev/Periods_Tracker/assets/94671784/2b64dbc2-ba8a-401a-8af6-372e707aae83)
+![Registerpage](https://github.com/JanakanDev/Periods_Tracker/assets/94671784/5dc6ccc7-2782-4cdd-81de-30fc44ef9259)
+
+
+
